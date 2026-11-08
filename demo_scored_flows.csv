@@ -1,0 +1,5 @@
+Label,random_forest_score,random_forest_alert,isolation_forest_score,isolation_forest_alert,simple_rule_score,simple_rule_alert
+BENIGN,0.10,False,0.40,False,1.20,False
+BENIGN,0.20,False,0.70,True,2.10,False
+DEMO_ATTACK,0.95,True,0.72,True,7.20,True
+DEMO_ATTACK,0.40,False,0.68,True,3.00,False
