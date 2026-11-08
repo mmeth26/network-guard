@@ -15,9 +15,14 @@ source .venv/bin/activate
 python3 -m streamlit run app.py --server.maxUploadSize 400
 ```
 
-Open `http://localhost:8501`. For a quick demo, choose **View scored results**
-and upload `v3_wednesday_frozen_run1/scored_flows.csv`. To analyze an
-unscored CSV, the app needs `v3_grouped_run1/models.joblib`.
+Open [http://localhost:8501](http://localhost:8501). For a quick demo,
+download [demo_scored_flows.csv](demo_scored_flows.csv), select
+**View scored results**, and upload the file. You should see four flows,
+with one flagged by Random Forest. The demo uses synthetic data and
+doesn't require a trained model.
+
+**Analyze raw flow CSV** requires a locally trained model at
+`v3_grouped_run1/models.joblib`, which is not included in this repository.
 
 ## What I learned 
 I evaluated the detectors using CICID2017 network-flow data. Random Forest flagged 231 of 283 attack flows in the held-out Tuesday development splits. With the model and threshold unchanged, it flagged 0 of 18,248 attack flows in the Wednesday sample, which contained different attack types. 
